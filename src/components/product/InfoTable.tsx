@@ -62,7 +62,7 @@ export default function InfoTable({
       </div>
 
       <div className="flex flex-row border-y py-3 border-[#efefef] md:items-center items-start pl-2 w-full">
-        <DPadIcon />
+        <DPadIcon size="28" />
         <div className="flex md:grid md:grid-cols-4 flex-col pl-5 md:items-center w-full">
           <p className="text-base md:text-lg font-semibold md:col-span-2">
             Genre

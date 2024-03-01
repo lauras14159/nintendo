@@ -1,8 +1,12 @@
-export default function DPadIcon() {
+type IconProps = {
+  size: string;
+};
+
+export default function DPadIcon({ size }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="28"
+      width={size}
       color="currentColor"
       data-testid="DPadIcon"
       viewBox="0 0 32 32"

@@ -10,10 +10,10 @@ import Image from "next/image";
 
 export default function TopNavBar() {
   const menu = [
-    { svg: <QuestionMarkIcon />, title: "Support" },
-    { svg: <HeartIcon />, title: "Wish List" },
-    { svg: <CartIcon />, title: "Cart" },
-    { svg: <UserIcon />, title: "Log in / Sign up" },
+    { svg: <QuestionMarkIcon />, title: "Support", link: "" },
+    { svg: <HeartIcon />, title: "Wish List", link: "" },
+    { svg: <CartIcon />, title: "Cart", link: "" },
+    { svg: <UserIcon />, title: "Log in / Sign up", link: "" },
   ];
   return (
     <div className="justify-between lg:flex hidden flex-row border-b border-[#DADADA]">
@@ -29,7 +29,12 @@ export default function TopNavBar() {
 
       <nav className="flex flex-row gap-x-5 items-center pr-10">
         {menu.map((data, index) => (
-          <HeaderItem svg={data.svg} pathname={data.title} key={index} />
+          <HeaderItem
+            svg={data.svg}
+            pathname={data.title}
+            key={index}
+            link={data.link}
+          />
         ))}
         <div>
           <Image src={flag} alt="us-flag" className="rounded-sm" />

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import SubCategoryItem from "../header/menu/SubCategoryItem";
+import ArrowDown from "../svg/ArrowDown";
 
 export default function CategoryDrop() {
   const [isDropdownActive, setIsDropdownActive] = useState(true),
@@ -11,17 +12,17 @@ export default function CategoryDrop() {
   return (
     <div className="group w-full">
       <span
-        className="text-tertiary font-bold text-sm group-hover:text-primary"
+        className="text-tertiary font-bold text-sm group-hover:text-primary flex flex-row items-center"
         onClick={toggle}
       >
         All categories
-        <i
-          className={`bi bi-chevron-down text-tertiary group-hover:text-primary duration-300 t pl-2  ${
-            !isDropdownActive
-              ? "rotate-90 transform-gpu ease-linear transition-all"
-              : "rotate-0"
+        <span
+          className={`text-tertiary group-hover:text-primary duration-300 ease-in-out ${
+            !isDropdownActive ? "-rotate-180 ml-5" : "rotate-0  pl-5"
           }`}
-        />
+        >
+          <ArrowDown />
+        </span>
       </span>
 
       {!isDropdownActive ? (

@@ -4,6 +4,7 @@ import thumbnail from "../../public/productImage.png";
 import RatingSection from "@/components/product/RatingSection";
 import PlayModes from "@/components/product/PlayModes";
 import InfoTable from "@/components/product/InfoTable";
+import Lightbox from "@/components/Lightbox";
 
 export default function Home() {
   const infoCardData = [
@@ -46,6 +47,7 @@ export default function Home() {
 
   return (
     <>
+      <Lightbox />
       {infoCardData.map((data, index) => (
         <InfoCard
           key={index}
@@ -55,7 +57,7 @@ export default function Home() {
           link={data.link}
         />
       ))}
-      <div className="flex md:flex-row flex-col md:px-10 gap-x-5 gap-y-5 md:gap-y-0 mx-auto justify-center ">
+      <div className="flex md:flex-row flex-col md:px-10 gap-x-5 gap-y-5 md:gap-y-0 mx-auto justify-center pt-10">
         <RatingSection />
         <PlayModes />
       </div>
