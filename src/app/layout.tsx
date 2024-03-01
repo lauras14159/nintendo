@@ -1,7 +1,7 @@
-import TopNavBar from "@/components/header/TopNavBar";
 import "./globals.css";
 import Footer from "@/components/footer";
-import NavBar from "@/components/header/NavBar";
+import MobileBanner from "@/components/header/MobileBanner";
+import Header from "@/components/header/menu";
 
 export default function RootLayout({
   children,
@@ -11,8 +11,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <TopNavBar />
-        <NavBar />
+        <MobileBanner />
+        <Header />
         <main className={`h-full flex-1 `}>{children}</main>
         <Footer />
       </body>

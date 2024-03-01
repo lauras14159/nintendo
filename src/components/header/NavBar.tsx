@@ -3,15 +3,15 @@ import { useState } from "react";
 import DPadIcon from "../svg/DPadIcon";
 import MyNintendoTileIcon from "../svg/MyNintendoTileIcon";
 import NewsIcon from "../svg/NewsIcon";
-import StarPlayNintendoIcon from "../svg/StarPlayNintendoIcon";
 import NavItem from "./menu/NavItem";
 import ArrowDown from "../svg/ArrowDown";
+import StarPlayNintendoIcon from "../svg/StarPlayNintendoIcon";
 
 export default function NavBar() {
   const [isDropdownActive, setIsDropdownActive] = useState(true);
 
   return (
-    <div className="flex flex-row text-tertiary  border-b border-[#DADADA]">
+    <div className="lg:flex hidden flex-row text-tertiary border-b border-[#DADADA]">
       <div className="flex flex-row py-4 mx-auto  gap-x-8">
         <NavItem svg={<MyNintendoTileIcon />}>
           <p
@@ -66,7 +66,7 @@ export default function NavBar() {
             News & Events
           </p>
         </NavItem>
-        <NavItem svg={<MyNintendoTileIcon />}>
+        <NavItem svg={<StarPlayNintendoIcon />}>
           <p
             className="group-hover:text-primary items-center flex flex-row w-fit"
             onClick={() => setIsDropdownActive(!isDropdownActive)}

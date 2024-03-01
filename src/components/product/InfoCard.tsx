@@ -34,7 +34,7 @@ export default function InfoCard({
   };
   return (
     <div className="flex md:flex-row flex-col text-tertiary justify-center md:gap-x-10 md:px-0 mx-5 py-10">
-      <div className="lg:max-w-xl max-w-xs flex-flex-col">
+      <div className="lg:max-w-xl  flex-flex-col">
         <p className="text-xl font-semibold">{title}</p>
         <div className="md:text-base text-sm pt-5 font-light whitespace-pre-line">
           {beginText}
