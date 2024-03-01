@@ -133,7 +133,7 @@ export default function Footer() {
   return (
     <>
       <SocialMediaBanner />
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-y-5 justify-around mx-auto w-full px-10 py-10">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-y-10 justify-around mx-auto w-full px-10 py-10 mb-32">
         {footerNav.map((data, index) => (
           <FooterItem
             key={index}

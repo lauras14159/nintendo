@@ -4,6 +4,7 @@ export default function EsrbPrivacyCertified() {
       xmlns="http://www.w3.org/2000/svg"
       className="EsrbPrivacyCertified__Svg-sc-er5ggs-0 AblpT"
       viewBox="0 0 114.03 154.33"
+      width={30}
     >
       <path d="M114.04 0H.04v154.33h114V0z" className="cls-1"></path>
       <path

@@ -3,6 +3,7 @@ import InfoCard from "@/components/product/InfoCard";
 import thumbnail from "../../public/productImage.png";
 import RatingSection from "@/components/product/RatingSection";
 import PlayModes from "@/components/product/PlayModes";
+import InfoTable from "@/components/product/InfoTable";
 
 export default function Home() {
   const infoCardData = [
@@ -15,6 +16,34 @@ export default function Home() {
       link: "",
     },
   ];
+
+  const productInfo = [
+    {
+      date: "October 5, 2017",
+      players: [
+        { player: "Single System (1)", playerLink: "" },
+        { player: `Local wireless (1)`, playerLink: "" },
+        { player: `Online (1-4)`, playerLink: "" },
+      ],
+      genres: [
+        {
+          genre: `Role-Playing`,
+          genreLink: "",
+        },
+        {
+          genre: `Simulation`,
+          genreLink: "",
+        },
+      ],
+      playMode: "TV mode, Tabletop mode, Handheld mode",
+      size: "1.5 GB",
+      language:
+        "English, French, German, Italian, Japanese, Korean, Portuguese, Russian, Simplified Chinese, Spanish, Traditional Chinese",
+      publishers: [{ publisher: "ConcernedApe", publisherLink: "" }],
+      rating: [{ rate: "Everyone 10+", rateLink: "" }],
+    },
+  ];
+
   return (
     <>
       {infoCardData.map((data, index) => (
@@ -29,6 +58,21 @@ export default function Home() {
       <div className="flex md:flex-row flex-col md:px-10 gap-x-5 gap-y-5 md:gap-y-0 mx-auto justify-center ">
         <RatingSection />
         <PlayModes />
+      </div>
+      <div className="py-10">
+        {productInfo.map((data, index) => (
+          <InfoTable
+            key={index}
+            date={data.date}
+            players={data.players}
+            genres={data.genres}
+            publishers={data.publishers}
+            rating={data.rating}
+            playMode={data.playMode}
+            size={data.size}
+            languages={data.language}
+          />
+        ))}
       </div>
       <WarningText />
     </>
