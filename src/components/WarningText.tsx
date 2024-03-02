@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function WarningText() {
   return (
-    <div className="md:text-xs text-[10px] text-[#484848] gap-y-10 md:max-w-5xl mx-auto py-10 px-5 lg:px-0 ">
+    <div className="md:text-xs text-[10px] text-[#484848] gap-y-10 md:max-w-6xl justify-center py-10 px-5 ">
       <p>
         WARNING: If you have epilepsy or have had seizures or other unusual
         reactions to flashing lights or patterns, consult a doctor before

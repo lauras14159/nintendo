@@ -76,7 +76,9 @@ export default function Home() {
           />
         ))}
       </div>
-      <WarningText />
+      <div className="justify-center flex">
+        <WarningText />
+      </div>
     </>
   );
 }

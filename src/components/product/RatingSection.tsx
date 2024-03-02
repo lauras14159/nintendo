@@ -2,7 +2,7 @@ import EsrbIcon from "../svg/EsrbIcon";
 
 export default function RatingSection() {
   return (
-    <div className="bg-[rgb(248,248,248)] rounded-xl relative flex-col flex md:px-5 py-5 md:w-2/5">
+    <div className="bg-[#f8f8f8] rounded-xl relative flex-col flex md:px-5 py-8 lg:w-2/5 md:w-1/2 w-full ">
       <p className="text-tertiary text-base font-semibold text-center">
         ESRB rating
       </p>
